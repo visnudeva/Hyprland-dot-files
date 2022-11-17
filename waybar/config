@@ -1,0 +1,111 @@
+{
+    "layer": "top", // Waybar at top layer
+    // "position": "bottom", // Waybar position (top|bottom|left|right)
+    // "height": 20, // Waybar height (to be removed for auto height)
+    // "width": 1280, // Waybar width
+    "spacing": 4, // Gaps between modules (4px)
+    
+    "modules-left": ["clock"],
+    "modules-center": ["custom/offswitch"],
+    "modules-right": [ "bluetooth", "pulseaudio", "network", "battery"],
+   
+    "keyboard-state": {
+        "numlock": true,
+        "capslock": true,
+        "format": "{name} {icon}",
+        "format-icons": {
+            "locked": "",
+            "unlocked": ""
+        }
+    },
+   
+    "idle_inhibitor": {
+        "format": "{icon}",
+        "format-icons": {
+            "activated": "",
+            "deactivated": ""
+        },
+        
+   "disk": {
+    "interval": 30,
+    "format": "DISK {free}% ",
+    "path": "/"}
+    },
+    
+    "tray": {
+        // "icon-size": 21,
+        "spacing": 10
+    },
+    
+      "clock": {
+        "interval": 1,
+        "format": "{:%a %e %b, %H:%M}",
+        "tooltip": false
+    },
+    
+    "cpu": {
+        "format": "CPU {usage}% ",
+        "tooltip": false
+    },
+    
+    "memory": {
+        "format": "RAM {}% "
+    },
+    
+    "bluetooth": {
+	"format": "BT {status}",
+	"format-connected": "BT {device_alias}",
+	"format-connected-battery": "BT {device_alias} {device_battery_percentage}%",
+	"on-click": "blueman-manager"
+    },
+
+    "temperature": {
+        // "thermal-zone": 2,
+        // "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
+        "critical-threshold": 80,
+        // "format-critical": "{temperatureC}°C ",
+        "format": "TEMP {temperatureC}°C "  
+    },
+    
+    "battery": {
+        "states": {
+            // "good": 95,
+            "warning": 20,
+            "critical": 15
+        },
+        "format": "BAT {capacity}% -",
+        "format-charging": "BAT {capacity}% +",
+        "format-alt": "{time} ",
+        // "format-good": "", // An empty format will hide the module
+        // "format-full": ""
+    },
+    
+       "custom/offswitch": {
+      "tooltip": false,
+      "format": "",
+     "interval": "once",
+     "on-click": "systemctl poweroff",
+},
+    
+    "network": {
+        // "interface": "wlp2*", // (Optional) To force the use of this interface
+        "format-wifi": "WIFI {signalStrength}% ",
+        "format-ethernet": "{ipaddr}/{cidr} ",
+        "tooltip-format": "{essid} ",
+        "format-linked": "{ifname} (No IP) ",
+        "format-disconnected": "Disconnected ",
+        "format-alt": "{ipaddr}/{cidr}"
+    },
+    "pulseaudio": {
+        // "scroll-step": 1, // %, can be a float
+        "format": "VOL {volume}%",
+        "format-bluetooth": "BT-VOL {volume}%",
+        "format-bluetooth-muted": "muted",
+        "format-muted": "muted",
+       "on-click": "pavucontrol"
+       
+    },
+       
+    }
+}
+
