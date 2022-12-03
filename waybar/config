@@ -1,13 +1,13 @@
 {
     "layer": "top", // Waybar at top layer
     // "position": "bottom", // Waybar position (top|bottom|left|right)
-    // "height": 20, // Waybar height (to be removed for auto height)
+    //"height": 20, // Waybar height (to be removed for auto height)
     // "width": 1280, // Waybar width
     "spacing": 4, // Gaps between modules (4px)
     
-    "modules-left": ["clock"],
-    "modules-center": ["custom/offswitch"],
-    "modules-right": [ "bluetooth", "pulseaudio", "network", "battery"],
+    "modules-left": ["custom/offswitch","clock"],
+    "modules-center": ["custom/vpn"], 
+    "modules-right": ["pulseaudio", "bluetooth", "network", "battery"],
    
     "keyboard-state": {
         "numlock": true,
@@ -32,6 +32,11 @@
     "path": "/"}
     },
     
+    "hyprland/window": {
+    "format": "{}",
+    "separate-outputs": true
+},
+    
     "tray": {
         // "icon-size": 21,
         "spacing": 10
@@ -40,8 +45,17 @@
       "clock": {
         "interval": 1,
         "format": "{:%a %e %b, %H:%M}",
-        "tooltip": false
+        "tooltip": false,
+         "on-click": ""
     },
+    
+    "user": {
+        "format": "{user} up since {work_M} mn",
+        "interval": 60,
+        "height": 30,
+        "width": 30,
+        "icon": false,
+},
     
     "cpu": {
         "format": "CPU {usage}% ",
@@ -81,10 +95,19 @@
     },
     
        "custom/offswitch": {
-      "tooltip": false,
-      "format": "",
-     "interval": "once",
-     "on-click": "systemctl poweroff",
+       "tooltip": false,
+       "format": "",
+       "interval": "once",
+       "on-click": "systemctl poweroff",
+},
+
+    "custom/vpn": {
+     "tooltip": false,
+     "format": "VPN {} ",
+     "exec": "mullvad status",
+     "interval": 1,
+     "on-click": "mullvad connect",
+     "on-click-right": "mullvad disconnect"
 },
     
     "network": {
@@ -93,6 +116,7 @@
         "format-ethernet": "{ipaddr}/{cidr} ",
         "tooltip-format": "{essid} ",
         "format-linked": "{ifname} (No IP) ",
+         "on-click": "nmd",
         "format-disconnected": "Disconnected ",
         "format-alt": "{ipaddr}/{cidr}"
     },
