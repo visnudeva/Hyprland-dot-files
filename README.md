@@ -8,7 +8,9 @@ Here are the config files i am using
 - Swaylock (lockscreen) clean, blurred and transparent.
 - Dmenu (network menu)
 - Wofi (software launcher)
-It is fully fonctionnnal but full of unused code bits because i am still playing with it adding and removing things.
+
+
+It is fully fonctionnnal but with unused code bits because i am still playing with it adding and removing things.
   
 **Enjoy!**
 
