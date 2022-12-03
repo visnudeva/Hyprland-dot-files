@@ -4,5 +4,5 @@ Here are the config files i am using for hyprland, hyprpaper (wallpaper), waybar
 they are fully fonctionnnal but full of unused code bits because i am still playing with it adding and removing things.
 Enjoy.
 
-![This is an image](https://github.com/visnudeva/dot-files/20221203_16h27m47s_grim.png)
+![screenshot](visnudeva/dot-files/20221203_16h27m47s_grim.png)
 
