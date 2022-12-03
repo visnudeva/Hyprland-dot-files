@@ -1,7 +1,7 @@
 style=/home/visnudeva/.config/wofi/style.css
 show=drun
 width=33%
-height=20%
+height=22%
 always_parse_args=true
 show_all=true
 print_command=true
