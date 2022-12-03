@@ -117,8 +117,7 @@
         "tooltip-format": "{essid} ",
         "format-linked": "{ifname} (No IP) ",
          "on-click": "nmd",
-        "format-disconnected": "Disconnected ",
-        "format-alt": "{ipaddr}/{cidr}"
+        "format-disconnected": "Disconnected "
     },
     "pulseaudio": {
         // "scroll-step": 1, // %, can be a float
