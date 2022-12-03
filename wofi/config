@@ -1,1 +1,13 @@
-
+style=/home/visnudeva/.config/wofi/style.css
+show=drun
+width=33%
+height=20%
+always_parse_args=true
+show_all=true
+print_command=true
+layer=top
+insensitive=false
+prompt=
+hide_scroll=true
+location=center
+normal_window=true 
