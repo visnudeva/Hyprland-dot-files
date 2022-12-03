@@ -1,0 +1,145 @@
+
+configuration {
+    show-icons:                     false;
+    disable-history:                false;
+    click-to-exit: 		           true;
+}
+
+window {
+    background-color:               rgba(27, 27, 27, 0.8);
+    text-color:                     #1affff;
+    border:                  		2px;
+    border-color:                  	#1affff;
+    border-radius:                  15px;
+    width:                          33%;
+    height:                         50%;
+    location:                       center;
+    anchor:                         center;
+    x-offset:                       0;
+    y-offset:                       0;
+}
+
+prompt {
+    enabled: 						true;
+	margin: 						0px 0px 0px 8px;
+    padding:    					6px 0px 6px 0px;
+	background-color: 				rgba(27, 27, 27, 0.8);
+	text-color: 					#1affff;
+    border:                  		0px 0px 1px 0px;
+    border-color:                  	@selected;
+    border-radius:                  0px;
+}
+
+textbox-prompt-colon {
+	expand: 						false;
+    border-radius:                  15px;
+    background-color:               rgba(27, 27, 27, 0.8);
+    text-color:                     #1affff;
+    padding:    					6px 10px 6px 10px;
+	font:							"FontAwesome, Roboto, Helvetica, Arial, sans-serif";
+}
+
+entry {
+    background-color:               rgba(27, 27, 27, 0.8);
+    text-color:                     #1affff;
+    border:                  		0px 0px 1px 0px;
+    border-radius:                  15px;
+    border-color:                  	@selected;
+    placeholder-color:              #1affff;
+    placeholder:                    "";
+    expand:                         true;
+    horizontal-align:               0;
+    blink:                          true;
+    padding:                        6px;
+}
+
+inputbar {
+	children: 						[ textbox-prompt-colon, prompt, entry ];
+    spacing:                        0;
+    background-color:               rgba(27, 27, 27, 0.8);
+    text-color:                     #1affff;
+    expand:                         false;
+    margin:                         0px 0px 0px 0px;
+    padding:                        0px;
+    position:                       center;
+}
+
+case-indicator {
+    background-color:              rgba(27, 27, 27, 0.8);
+    text-color:                     #1affff;
+    spacing:                        0;
+}
+
+
+listview {
+    background-color:               rgba(27, 27, 27, 0.8);
+    columns:                        1;
+    spacing:                        4px;
+    cycle:                          true;
+    dynamic:                        true;
+    layout:                         vertical;
+}
+
+mainbox {
+    background-color:               rgba(27, 27, 27, 0.8);
+    children:                       [ inputbar, listview ];
+    spacing:                       	10px;
+    padding:                        10px;
+}
+
+element {
+    background-color:               rgba(27, 27, 27, 0.8);
+    text-color:                     #1affff;
+    orientation:                    horizontal;
+    border-radius:                  0px;
+    padding:                        0px;
+}
+
+element-icon {
+    background-color: 				inherit;
+    text-color:       				inherit;
+    horizontal-align:               0.5;
+    vertical-align:                 0.5;
+    size:                           0px;
+    border:                         0px;
+}
+
+element-text {
+    background-color: 				inherit;
+    text-color:       				inherit;
+    expand:                         true;
+    horizontal-align:               0;
+    vertical-align:                 0;
+    margin:                         2px 0px 2px 2px;
+}
+
+element normal.urgent,
+element alternate.urgent {
+    background-color:               @urgent;
+    text-color:                     #1affff;
+    border-radius:                  0px;
+}
+
+element normal.active,
+element alternate.active {
+    background-color:               rgba(27, 27, 27, 0.8);
+    text-color:                     #1affff;
+}
+
+element selected {
+    background-color:              #1affff;
+    text-color:                      rgba(27, 27, 27, 0.8);
+    border:                  		0px;
+    border-radius:                  15px;
+    border-color:                  	@selected;
+}
+
+element selected.urgent {
+    background-color:               @urgent;
+    text-color:                    #1affff;
+}
+
+element selected.active {
+    background-color:               #595959;
+    color:                         #1affff;
+}
