@@ -5,8 +5,8 @@
 }
 
 window#waybar {
-    background-color: rgba(43, 48, 59, 0);
-    border-bottom: 0px solid rgba(26, 255, 255, 0.93);
+    background-color: rgba(59, 59, 59, 0);
+    border-bottom: 2px solid rgba(59, 59, 59, 0);
     color: #ffffff;
     transition-property: background-color;
     transition-duration: .5s;
@@ -127,7 +127,7 @@ window#waybar.chromium {
 }
 
 label:focus {
-    background-color: #000000;
+    background-color: #595959;
 }
 
 #cpu {
@@ -159,8 +159,8 @@ label:focus {
 }
 
 #pulseaudio.muted {
-    background-color: #90b1b1;
-    color: #2a5c45;
+    background-color: #595959;
+    color: #1affff;
 }
 
 #custom-media {

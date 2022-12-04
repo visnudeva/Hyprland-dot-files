@@ -9,6 +9,71 @@
     "modules-center": ["custom/vpn"], 
     "modules-right": ["pulseaudio", "bluetooth", "network", "battery"],
    
+       "custom/offswitch": {
+       "tooltip": false,
+       "format": "{icon}",
+       "format-icons": "",
+       "interval": "once",
+       "on-click": "systemctl poweroff"
+},
+    
+      "clock": {
+        "interval": 60,
+        "format": "{:%a %e %b, %H:%M}",
+        "tooltip": false,
+        "on-click": ""
+    },
+    
+    "custom/vpn": {
+     "tooltip": false,
+     "format": "VPN {} ",
+     "exec": "mullvad status",
+     "interval": 1,
+     "on-click": "mullvad connect",
+     "on-click-right": "mullvad disconnect"
+},
+    
+        "pulseaudio": {
+        // "scroll-step": 1, // %, can be a float
+        "format": "VOL {volume}%",
+        "format-bluetooth": "BT-VOL {volume}%",
+        "format-bluetooth-muted": "muted",
+        "format-muted": "muted",
+        "on-click": "pavucontrol" 
+    },
+  
+    "bluetooth": {
+	"format": "BT {status}",
+	"format-connected": "BT {status} to {device_alias}",
+	"format-connected-battery": "BT  {status} to {device_alias} {device_battery_percentage}%",
+	"tooltip-format": "{controller_alias}",
+	"on-click": "blueman-manager"
+    },
+
+    "network": {
+        // "interface": "wlp2*", // (Optional) To force the use of this interface
+        "format-wifi": "WIFI {signalStrength}% ",
+        "format-ethernet": "{ipaddr}/{cidr} ",
+        "tooltip-format": "{essid} ",
+        "format-linked": "{ifname} (No IP) ",
+         "on-click": "nmd",
+        "format-disconnected": "Disconnected "
+    },
+  
+    "battery": {
+        "states": {
+            "warning": 20,
+            "critical": 15
+        },
+        "format": "BAT {capacity}% -",
+        "format-charging": "BAT {capacity}% +",
+        "format-alt": "{time} ",
+        "tooltip-format": "{timeTo}"
+        // "format-good": "", // An empty format will hide the module
+        // "format-full": ""
+    },
+    
+
     "keyboard-state": {
         "numlock": true,
         "capslock": true,
@@ -31,33 +96,21 @@
     "format": "DISK {free}% ",
     "path": "/"}
     },
-    
-    "hyprland/window": {
-    "format": "{}",
-    "separate-outputs": true
-},
-    
+ 
     "tray": {
         // "icon-size": 21,
         "spacing": 10
     },
-    
-      "clock": {
-        "interval": 1,
-        "format": "{:%a %e %b, %H:%M}",
-        "tooltip": false,
-         "on-click": ""
-    },
-    
-    "user": {
+ 
+     "user": {
         "format": "{user} up since {work_M} mn",
         "interval": 60,
         "height": 30,
         "width": 30,
-        "icon": false,
+        "icon": false
 },
-    
-    "cpu": {
+ 
+   "cpu": {
         "format": "CPU {usage}% ",
         "tooltip": false
     },
@@ -65,70 +118,20 @@
     "memory": {
         "format": "RAM {}% "
     },
-    
-    "bluetooth": {
-	"format": "BT {status}",
-	"format-connected": "BT {device_alias}",
-	"format-connected-battery": "BT {device_alias} {device_battery_percentage}%",
-	"on-click": "blueman-manager"
-    },
-
-    "temperature": {
+ 
+     "hyprland/window": {
+    "format": "{}",
+    "separate-outputs": true
+},
+ 
+     "temperature": {
         // "thermal-zone": 2,
         // "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
         "critical-threshold": 80,
         // "format-critical": "{temperatureC}°C ",
         "format": "TEMP {temperatureC}°C "  
     },
-    
-    "battery": {
-        "states": {
-            // "good": 95,
-            "warning": 20,
-            "critical": 15
-        },
-        "format": "BAT {capacity}% -",
-        "format-charging": "BAT {capacity}% +",
-        "format-alt": "{time} ",
-        // "format-good": "", // An empty format will hide the module
-        // "format-full": ""
-    },
-    
-       "custom/offswitch": {
-       "tooltip": false,
-       "format": "",
-       "interval": "once",
-       "on-click": "systemctl poweroff",
-},
-
-    "custom/vpn": {
-     "tooltip": false,
-     "format": "VPN {} ",
-     "exec": "mullvad status",
-     "interval": 1,
-     "on-click": "mullvad connect",
-     "on-click-right": "mullvad disconnect"
-},
-    
-    "network": {
-        // "interface": "wlp2*", // (Optional) To force the use of this interface
-        "format-wifi": "WIFI {signalStrength}% ",
-        "format-ethernet": "{ipaddr}/{cidr} ",
-        "tooltip-format": "{essid} ",
-        "format-linked": "{ifname} (No IP) ",
-         "on-click": "nmd",
-        "format-disconnected": "Disconnected "
-    },
-    "pulseaudio": {
-        // "scroll-step": 1, // %, can be a float
-        "format": "VOL {volume}%",
-        "format-bluetooth": "BT-VOL {volume}%",
-        "format-bluetooth-muted": "muted",
-        "format-muted": "muted",
-       "on-click": "pavucontrol"
-       
-    },
-       
+ 
     }
 }
 
