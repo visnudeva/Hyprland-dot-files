@@ -8,7 +8,7 @@ Here are the config files i am using
 - Swaylock (lockscreen) clean, blurred and transparent.
 - Dmenu (network menu)
 - Wofi (software launcher)
-- Mako (notifications)
+- Mako (notification daemon)
 
 
 It is fully fonctionnnal but with unused code bits because i am still playing with it adding and removing things.
