@@ -68,11 +68,11 @@ label:focus {
 }
 
 #custom-vpn {
-	color: #595959;
+	color: #1affff;
 	border-radius: 15px;
 }
 
 #custom-vpn:hover {
-	background: #1affff;
+	background: #595959;
 	border-radius: 15px;
 }
