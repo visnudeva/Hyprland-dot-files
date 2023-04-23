@@ -56,7 +56,7 @@
         "format-ethernet": "{ipaddr}/{cidr} ",
         "tooltip-format": "{essid} ",
         "format-linked": "{ifname} (No IP) ",
-         "on-click": "nmd",
+         "on-click": "nm-connection-editor",
         "format-disconnected": "Disconnected "
     },
   
