@@ -1,12 +1,12 @@
 # Hyprland dot-files
 
 
-Here are the config files i am using
+Here are the softwares i installed and config files i am using
 - Hyprland (window manager)
 - Hyprpaper (wallpaper) 
 - Waybar (Wayland bar) with a custom mudule for Mullvad VPN which shows the location of the VPN and can be connected with a right click and disconnected with left click on the module.
 - Swaylock (lockscreen) clean, blurred and transparent.
-- Dmenu (network menu)
+- nm-connection-editor (network menu)
 - Wofi (software launcher)
 - Mako (notification daemon)
 
