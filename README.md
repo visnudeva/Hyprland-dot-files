@@ -5,7 +5,7 @@ Here are the softwares i installed and config files i am using
 - Hyprland (window manager)
 - Hyprpaper (wallpaper) 
 - Waybar (wayland bar) with a custom mudule for Mullvad VPN which shows the location of the VPN and can be connected with a right click and disconnected with left click on the module.
-- Swaylock (lockscreen) clean, blurred and transparent.
+- Swaylock-effects (lockscreen) clean, blurred and transparent.
 - Wofi (software launcher)
 - Mako (notification daemon)
 - nm-connection-editor (network menu) accesible with a click on the wifi module of the waybar
