@@ -1,7 +1,8 @@
 # Hyprland dot-files
 
+My infrared theme with the wallpaper i made correponding to the theme,
+the softwares i installed and the up to date config files i am using:
 
-Here are the softwares i installed and config files i am using
 - Hyprland (window manager)
 - Hyprpaper (wallpaper) 
 - Waybar-hyprland (wayland bar) with a custom mudule for Mullvad VPN which shows the location of the VPN and can be connected with a right click and disconnected with left click on the module.
