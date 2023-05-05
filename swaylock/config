@@ -11,25 +11,25 @@ effect-vignette=0.3:0.9
 timestr=%H:%M
 datestr=%a %e %b
 
-text-color=ffffff50
+text-color=e70948
 indicator-radius=200
-indicator-thickness=5
-inside-color=ffffff10
-key-hl-color=ffffff80
-ring-color=1affff10
+indicator-thickness=10
+inside-color=1b1b1b00
+key-hl-color=ffffff
+ring-color=e70948
 
 separator-color=ffffff00
 
-text-clear-color=ffffff80
-inside-clear-color=ffffff10
-ring-clear-color=ffffff80
+text-clear-color=595959
+inside-clear-color=00000000
+ring-clear-color=595959
 
-text-wrong-color=ff000080
-inside-wrong-color=ff000010
-ring-wrong-color=ff000080
+text-wrong-color=595959
+inside-wrong-color=e70948
+ring-wrong-color=e70948
 
-text-ver-color=1affff80
-inside-ver-color=1affff10
-ring-ver-color=1affff80
+text-ver-color=595959
+inside-ver-color=00000000
+ring-ver-color=595959
 
 
