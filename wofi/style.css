@@ -1,23 +1,24 @@
 window {
 margin: 0px;
-border: 2px solid #1affff;
+border: 2px solid #e70948;
 border-radius: 15px;
 background-color: #1b1b1b;
 font-family: FontAwesome, Roboto, Helvetica, Arial, sans-serif;
 font-size: 16px;
-color:#1affff;
+color:#e70948;
 }
 
 #input {
 margin: 5px;
-border: none;
+border: 0px;
 background-color:#1b1b1b;
 border-radius: 15px;
-color:#1affff;
+box-shadow: inset 0 -3px transparent;
+color:#e70948;
 }
 
 #input image {
-	color: #1affff;
+	color: #e70948;
 }
 
 #inner-box {
@@ -35,13 +36,13 @@ border: none;
 margin: 5px;
 border: 0px;
 border-radius: 0px;
-#color: #1affff;
-#box-shadow: inset 0 -3px transparent;
+#color: #e70948;
+box-shadow: inset 0 -3px transparent;
 font-weight: normal;
 }
 
 #entry:selected {
-	background-color: #1affff;
+	background-color: #e70948;
 	border: none;
 	border-radius: 15px;
 	color:#1b1b1b;
@@ -50,7 +51,7 @@ font-weight: normal;
 }
 
 #text:selected {
-	background-color: #1affff;
+	background-color: #e70948;
 	margin: 5px;
 	border: 0px;
 	border-radius: 0px;
