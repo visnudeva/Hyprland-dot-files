@@ -3,25 +3,42 @@
     // "position": "bottom", // Waybar position (top|bottom|left|right)
     //"height": 20, // Waybar height (to be removed for auto height)
     // "width": 1280, // Waybar width
-    "spacing": 4, // Gaps between modules (4px)
+    "spacing": 10, // Gaps between modules (4px)
+    "margin": 10,
     
-    "modules-left": ["custom/offswitch","clock"],
-    "modules-center": ["custom/vpn"], 
-    "modules-right": ["pulseaudio", "bluetooth", "network", "battery"],
-   
+    "modules-left": ["wlr/workspaces", "custom/vpn"],
+    "modules-center": ["clock"],
+    "modules-right": ["hyprland/window","disk", "pulseaudio", "bluetooth", "network", "battery", "idle_inhibitor", "tray"],
+    
+    
+     "wlr/workspaces": {
+         "sort-by-number": true,
+         "format": "{icon}",
+         "on-click": "activate"
+    },
+    
+    
        "custom/offswitch": {
        "tooltip": false,
        "format": "{icon}",
-       "format-icons": "",
+       "format-icons": " ",
        "interval": "once",
-       "on-click": "systemctl poweroff"
+       "on-click": "systemctl poweroff",
+       "on-click-right": "reboot"
 },
     
+     "idle_inhibitor": {
+                "format": "{icon}",
+                "format-icons": {
+                    "activated": " ",
+                    "deactivated": " "
+                }
+           },
+           
       "clock": {
         "interval": 60,
         "format": "{:%a %e %b, %H:%M}",
-        "tooltip": false,
-        "on-click": ""
+        "on-click": "systemctl poweroff"
     },
     
     "custom/vpn": {
@@ -62,18 +79,25 @@
   
     "battery": {
         "states": {
-            "warning": 20,
             "critical": 15
         },
-        "format": "BAT {capacity}% -",
-        "format-charging": "BAT {capacity}% +",
-        "format-alt": "{time} ",
+        "format": "BAT {capacity}%",
+        "format-charging": "BAT+ {capacity}%",
         "tooltip-format": "{timeTo}"
-        // "format-good": "", // An empty format will hide the module
-        // "format-full": ""
     },
     
-
+ "tray": {
+        // "icon-size": 21,
+        "spacing": 10
+    },
+    
+        "hyprland/window": {
+    "format": "{}",
+    "max-length": 50,
+    "tooltip": false
+	},
+    
+    
     "keyboard-state": {
         "numlock": true,
         "capslock": true,
@@ -83,23 +107,11 @@
             "unlocked": ""
         }
     },
-   
-    "idle_inhibitor": {
-        "format": "{icon}",
-        "format-icons": {
-            "activated": "",
-            "deactivated": ""
-        },
         
    "disk": {
     "interval": 30,
-    "format": "DISK {free}% ",
-    "path": "/"}
-    },
- 
-    "tray": {
-        // "icon-size": 21,
-        "spacing": 10
+    "format": "SSD {free}",
+    
     },
  
      "user": {
@@ -108,6 +120,7 @@
         "height": 30,
         "width": 30,
         "icon": false
+        
 },
  
    "cpu": {
@@ -118,11 +131,7 @@
     "memory": {
         "format": "RAM {}% "
     },
- 
-     "hyprland/window": {
-    "format": "{}",
-    "separate-outputs": true
-},
+
  
      "temperature": {
         // "thermal-zone": 2,

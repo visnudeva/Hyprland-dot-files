@@ -25,6 +25,17 @@ window#waybar.solo {
     background-color: #FFFFFF;
 }
 */
+#custom-offswitch,
+#custom-vpn,
+#window
+
+{
+    color: #595959;
+    border-radius: 15px;
+    padding-left: 6px;
+    padding-right: 6px;
+}
+
 
 #clock,
 #battery,
@@ -34,21 +45,27 @@ window#waybar.solo {
 #network.disconnected,
 #pulseaudio,
 #bluetooth,
-#custom-offswitch
+#idle_inhibitor,
+#disk,
+#user
  {
-    color: #1affff;
+    color: #e70948;
     border-radius: 15px;
+    padding-left: 6px;
+    padding-right: 6px;
 }
 
 @keyframes blink {
     to {
-        background-color: #ffffff;
-        color: #1affff;
+        background-color: #e70948;
+        color: #1b1b1b;
     }
 }
 
 #battery.critical:not(.charging) {
-    color: #1affff;
+    color: #e70948;
+    padding-left: 6px;
+    padding-right: 6px;
     animation-name: blink;
     animation-duration: 0.5s;
     animation-timing-function: linear;
@@ -56,23 +73,49 @@ window#waybar.solo {
     animation-direction: alternate;
 }
 
-label:focus {
-    background-color: #595959;
-    border-radius: 15px;
-}
-
 #pulseaudio.muted {
-    background-color: #595959;
-    color: #1affff;
+    background-color: #e70948;
+    color: #1b1b1b;
     border-radius: 15px;
+    padding-left: 6px;
+    padding-right: 6px;
+
 }
 
 #custom-vpn {
-	color: #1affff;
+	color: #e70948;
 	border-radius: 15px;
+	padding-left: 6px;
+    padding-right: 6px;
 }
 
-#custom-vpn:hover {
-	background: #595959;
-	border-radius: 15px;
+#workspaces button {
+  padding: 0 5px;
+  background: transparent;
+  color: #595959;
+  border-radius: 15px;
+}
+
+#workspaces button:hover {
+  color: #1b1b1b;
+  background-color: #595959;
+  border-radius: 15px;
+}
+
+#workspaces button.active {
+  background: #e70948;
+  color: #1b1b1b;
+  border-radius: 15px;
+}
+
+#workspaces button.urgent {
+  color: #e70948;
+}
+
+tooltip {
+  background: #1b1b1b;
+  border-radius: 15px;
+  border-width: 2px;
+  border-style: solid;
+  border-color: #e70948;
 }
