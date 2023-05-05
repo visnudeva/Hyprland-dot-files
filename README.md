@@ -18,6 +18,6 @@ It is fully fonctionnnal but with unused code bits because i am still playing wi
   
 **Enjoy!**
 
-![screenshot](https://github.com/visnudeva/dot-files/blob/main/20230505_12h09m51s_grim.png)
+![screenshot1](https://github.com/visnudeva/dot-files/blob/main/20230505_12h09m51s_grim.png)
 
-![wallpaper](https://github.com/visnudeva/dot-files/blob/main/Wallpaper01.jpg)
+![screenshot2](https://github.com/visnudeva/dot-files/blob/main/20230505_12h24m17s_grim.png)
