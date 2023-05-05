@@ -17,5 +17,5 @@ It is fully fonctionnnal but with unused code bits because i am still playing wi
   
 **Enjoy!**
 
-![screenshot](https://github.com/visnudeva/dot-files/blob/main/20221203_16h27m47s_grim.png)
+![screenshot](https://github.com/visnudeva/dot-files/blob/main/20230505_12h09m51s_grim.png)
 
