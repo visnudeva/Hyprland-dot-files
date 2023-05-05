@@ -20,4 +20,4 @@ It is fully fonctionnnal but with unused code bits because i am still playing wi
 
 ![screenshot](https://github.com/visnudeva/dot-files/blob/main/20230505_12h09m51s_grim.png)
 
-![wallpaper](https://github.com/visnudeva/dot-files/blob/main/wallpaper01.png)
+![wallpaper](https://github.com/visnudeva/dot-files/blob/main/Wallpaper01.png)
