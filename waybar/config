@@ -6,16 +6,35 @@
     "spacing": 10, // Gaps between modules (4px)
     "margin": 10,
     
-    "modules-left": ["wlr/workspaces", "custom/vpn"],
+    "modules-left": ["wlr/workspaces", "hyprland/window"],
     "modules-center": ["clock"],
-    "modules-right": ["hyprland/window","disk", "pulseaudio", "bluetooth", "network", "battery", "idle_inhibitor", "tray"],
+    "modules-right": ["custom/vpn", "disk", "pulseaudio", "bluetooth", "network", "battery", "tray"],
     
     
      "wlr/workspaces": {
          "sort-by-number": true,
          "format": "{icon}",
-         "on-click": "activate"
-    },
+         "on-click": "activate",
+         "format-icons":{
+		 "1": "",
+		 "2": "",
+		 "3": "",
+		 "4": "",
+		 "5": "",
+		 "urgent": "",
+		 "active": "",
+		 "default": ""
+	}
+},
+    
+    
+    "custom/red": {
+    "format": "{}RED",
+    "interval": "once",
+    "on-click": "wl-gammarelay-rs & busctl --user -- set-property rs.wl-gammarelay / rs.wl.gammarelay Temperature q 1000",
+    "on-click-right": "wl-gammarelay-rs & busctl --user -- set-property rs.wl-gammarelay / rs.wl.gammarelay Temperature q 10000",
+    "signal": 8
+},
     
     
        "custom/offswitch": {
@@ -130,15 +149,6 @@
     
     "memory": {
         "format": "RAM {}% "
-    },
-
- 
-     "temperature": {
-        // "thermal-zone": 2,
-        // "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
-        "critical-threshold": 80,
-        // "format-critical": "{temperatureC}°C ",
-        "format": "TEMP {temperatureC}°C "  
     },
  
     }

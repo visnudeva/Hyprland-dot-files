@@ -6,7 +6,6 @@
 
 window#waybar {
     background-color: rgba(59, 59, 59, 0);
-    border-bottom: 2px solid rgba(59, 59, 59, 0);
     border-radius: 15px;
     color: #ffffff;
     transition-property: background-color;
@@ -25,8 +24,32 @@ window#waybar.solo {
     background-color: #FFFFFF;
 }
 */
-#custom-offswitch,
-#custom-vpn,
+#workspaces button {
+  padding: 0 5px;
+  background-color: transparent;
+  color: #595959;
+  border-radius: 15px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #e70948;
+}
+
+#workspaces button:hover {
+  color: #1b1b1b;
+  background-color: #595959;
+  border-radius: 15px;
+}
+
+#workspaces button.active {
+  background: #e70948;
+  color: #1b1b1b;
+  border-radius: 15px;
+}
+
+#workspaces button.urgent {
+  color: #e70948;
+}
+
 #window
 
 {
@@ -37,6 +60,7 @@ window#waybar.solo {
 }
 
 
+#custom-red,
 #clock,
 #battery,
 #battery.charging, 
@@ -83,33 +107,10 @@ window#waybar.solo {
 }
 
 #custom-vpn {
-	color: #e70948;
+	color: #595959;
 	border-radius: 15px;
 	padding-left: 6px;
     padding-right: 6px;
-}
-
-#workspaces button {
-  padding: 0 5px;
-  background: transparent;
-  color: #595959;
-  border-radius: 15px;
-}
-
-#workspaces button:hover {
-  color: #1b1b1b;
-  background-color: #595959;
-  border-radius: 15px;
-}
-
-#workspaces button.active {
-  background: #e70948;
-  color: #1b1b1b;
-  border-radius: 15px;
-}
-
-#workspaces button.urgent {
-  color: #e70948;
 }
 
 tooltip {
