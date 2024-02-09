@@ -17,6 +17,7 @@ the softwares i installed and the up-to-date config files i am using:
 - Kanada cursors (red cursor)
 - Kripton gtk-theme
 - Nordic-Folders icons
+- Ly - a TUI display manager (a graphical login program and session manager)
 
 It is fully fonctionnnal but with unused code bits because i am still playing with it adding and removing things.
   
